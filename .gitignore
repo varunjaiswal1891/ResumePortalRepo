@@ -6,4 +6,6 @@ target/classes/io/javabrains/varun/resumeportal/ResumePortalApplication.class
 target/test-classes/io/javabrains/varun/resumeportal/ResumePortalApplicationTests.class
 target/classes
 target/maven-status
+target/
+
 
