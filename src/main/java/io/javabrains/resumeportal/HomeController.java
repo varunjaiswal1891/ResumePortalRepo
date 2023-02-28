@@ -35,13 +35,15 @@ public class HomeController {
     @GetMapping("/view/{userId}")
     public String viewFun(@PathVariable String userId,Model model) {
 
-        Optional<UserProfile> userProfile = userProfileRepository.findByUserName(userId);
-        userProfile.orElseThrow(()-> new RuntimeException("User not found "+userId));
+        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userId);
+        userProfileOptional.orElseThrow(()-> new RuntimeException("User not found "+userId));
+
+        UserProfile userProfile = userProfileOptional.get();
 
         model.addAttribute("userId", userId);
         model.addAttribute("userProfile", userProfile);
         
-        return "profile-templates/" + userProfile.get().getId() + "/index" ;
+        return "profile-templates/" + userProfile.getId() + "/index" ;
     }
 
 
