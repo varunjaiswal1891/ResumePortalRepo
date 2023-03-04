@@ -31,7 +31,7 @@ public class HomeController {
         UserProfile userProfile1 = userProfileOptional.get();
         
         Job j1 = new Job();
-        j1.setCompany("Infosys C1");
+        j1.setCompany("Infosys Pvt Ltd");
         j1.setCurrentJob(false);
         j1.setId(1001);
         j1.setDesignation("System Engineer");
@@ -39,7 +39,7 @@ public class HomeController {
         j1.setCurrentJob(true);
 
         Job j2 = new Job();
-        j2.setCompany("Cisco Systems C2");
+        j2.setCompany("Cisco Systems Ltd");
         j2.setCurrentJob(true);
         j2.setId(1002);
         j2.setDesignation("Software Engineer 2");
