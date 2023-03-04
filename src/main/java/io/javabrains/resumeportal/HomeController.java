@@ -34,7 +34,7 @@ public class HomeController {
         j1.setCompany("Infosys Pvt Ltd");
         j1.setCurrentJob(false);
         j1.setId(1001);
-        j1.setDesignation("System Engineer");
+        j1.setDesignationTitle("System Engineer");
         j1.setStartDate(LocalDate.of(2020, 1, 1));
         j1.setCurrentJob(true);
 
@@ -42,7 +42,7 @@ public class HomeController {
         j2.setCompany("Cisco Systems Ltd");
         j2.setCurrentJob(true);
         j2.setId(1002);
-        j2.setDesignation("Software Engineer 2");
+        j2.setDesignationTitle("Software Engineer 2");
         j2.setStartDate(LocalDate.of(2019, 5, 1));
         j2.setEndDate(LocalDate.of(2020, 1, 1));
         j2.setCurrentJob(false);
@@ -72,8 +72,8 @@ public class HomeController {
         model.addAttribute("userId", userId);
         model.addAttribute("userProfile", userProfile);
         
-        System.out.println("user profile ="+userProfile.getJobs().get(0).getCompany());
-        System.out.println("user profile ="+userProfile.getJobs().get(1).getCompany());
+        //System.out.println("user profile ="+userProfile.getJobs().get(0).getCompany());
+        //System.out.println("user profile ="+userProfile.getJobs().get(1).getCompany());
 
         return "profile-templates/" + userProfile.getId() + "/index" ;
     }

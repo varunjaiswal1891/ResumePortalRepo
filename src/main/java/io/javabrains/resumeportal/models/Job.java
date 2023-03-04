@@ -17,7 +17,7 @@ public class Job {
     private int id;
     
     private String company;
-    private String designation;
+    private String designationTitle;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
@@ -50,7 +50,7 @@ public class Job {
         return "Job{" +
                 "id=" + id +
                 ", company='" + company + '\'' +
-                ", designation='" + designation + '\'' +
+                ", designation='" + designationTitle + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
@@ -72,12 +72,12 @@ public class Job {
         this.company = company;
     }
 
-    public String getDesignation() {
-        return designation;
+    public String getDesignationTitle() {
+        return designationTitle;
     }
 
-    public void setDesignation(String designation) {
-        this.designation = designation;
+    public void setDesignationTitle(String designation) {
+        this.designationTitle = designation;
     }
 
     public LocalDate getStartDate() {
