@@ -1,5 +1,8 @@
 package io.javabrains.resumeportal.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +15,61 @@ public class UserProfile {
     private int theme;
     private String userName;
     private String summary;
+
+    private String firstName;
+    private String designation;
+    private String lastName;
+    private String email;
+    private String phone;
+
+    @OneToMany(cascade=CascadeType.ALL,orphanRemoval = true)
+    @JoinColumn(name = "job_id")
+    List<Job> jobs = new ArrayList<>();
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+   
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+   
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+   
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
 
     public int getId() {
         return id;

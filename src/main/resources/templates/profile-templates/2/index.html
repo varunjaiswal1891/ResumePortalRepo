@@ -38,20 +38,21 @@
             <!-- Microformats! -->
         
             <h1 class="fn">
-                <span>Joe</span>
-                <span>Bloggs</span>
+                <span th:text="${userProfile.firstName}">fname></span>
+				<span th:text="${userProfile.lastName}">lname></span>
             </h1>
         
-            <!--
+            
             <p>
-                Cell: <span class="tel" th:text="${userProfile.phone}">555-666-7777</span><br />
-                Email: <a th:text="${userProfile.email}" class="email" href="mailto:${userProfile.email}">greatoldone@lovecraft.com</a>
+                Cell: <span class="tel" th:text="${userProfile.phone}"></span><br />
+                Email: <a th:text="${userProfile.email}" class="email" href="mailto:${userProfile.email}"></a>
             </p>
-            -->
+            
         </div>
                 
         <div id="objective">
             <p th:text="${userProfile.summary}">
+                I am a sports loving person with very good music skill also.
             </p>
         </div>
         
