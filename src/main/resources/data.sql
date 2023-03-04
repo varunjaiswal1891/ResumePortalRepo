@@ -3,6 +3,7 @@ insert into user (id, user_name, password, active, roles) values
 (2, 'virat', 'virat', true, 'USER'),
 (3, 'varun', 'varun', true, 'USER');
 
+
 insert into user_profile (id, user_name, theme, summary,first_name,last_name,designation,email,phone) values
 (1, 'shruti', '1', 'USER shruti summary','shruti','jaiswal','executive mgr','shruti@gmail.com','1234'),
 (2, 'virat', '2', 'USER virat summary','virat','kohli','cricketer','kohli@gmail.com','123477'),

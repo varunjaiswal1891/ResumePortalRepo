@@ -22,9 +22,17 @@ public class UserProfile {
     private String email;
     private String phone;
 
-    @OneToMany(cascade=CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(cascade=CascadeType.ALL,orphanRemoval = false)
     @JoinColumn(name = "job_id")
     List<Job> jobs = new ArrayList<>();
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
 
     public String getFirstName() {
         return firstName;

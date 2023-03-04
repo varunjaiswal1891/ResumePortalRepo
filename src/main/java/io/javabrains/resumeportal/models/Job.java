@@ -11,18 +11,23 @@ import java.util.List;
 @Entity
 @Table
 public class Job {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    
     private String company;
     private String designation;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+    
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
-    private boolean isCurrentJob;
+    private boolean currentJob;
+
     @ElementCollection(targetClass=String.class)
-    private List<String> responsibilities = new ArrayList();
+    private List<String> responsibilities = new ArrayList<String>();
 
     public List<String> getResponsibilities() {
         return responsibilities;
@@ -33,11 +38,11 @@ public class Job {
     }
 
     public boolean isCurrentJob() {
-        return isCurrentJob;
+        return currentJob;
     }
 
     public void setCurrentJob(boolean currentJob) {
-        isCurrentJob = currentJob;
+        this.currentJob = currentJob;
     }
 
     @Override
