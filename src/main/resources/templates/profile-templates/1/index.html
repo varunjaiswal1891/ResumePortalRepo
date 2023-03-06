@@ -91,8 +91,13 @@
 			<div class="sectionTitle">
 				<h1>Education</h1>
 			</div>
-			
-			
+			<div class="sectionContent" th:each="education : ${userProfile.educations}">
+				<article>
+					<h2><span th:text="${education.college}">MyCollege</span></h2>
+					<p class="subDetails" th:text="${education.qualification} ">TestQualification</p>
+					<p th:text="${education.summary} ">TestSummary</p>					
+				</article>
+			</div>
 			<div class="clear"></div>
 		</section>
 		

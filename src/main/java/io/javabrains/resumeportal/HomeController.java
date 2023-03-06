@@ -55,6 +55,23 @@ public class HomeController {
         userProfile1.getJobs().add(j1);
         userProfile1.getJobs().add(j2);
 
+        Education e1 = new Education();
+        e1.setCollege("GSITS");
+        e1.setQualification("BTECH");
+        e1.setSummary("GSITS degree summary");
+        e1.setStartDate(LocalDate.of(2014, 7, 7));
+        e1.setEndDate(LocalDate.of(2017, 7, 1));
+
+        Education e2 = new Education();
+        e2.setCollege("IIITB");
+        e2.setQualification("M.TECH");
+        e2.setSummary("Mtech ki degree summary");
+        e2.setStartDate(LocalDate.of(2017, 8, 7));
+        e2.setEndDate(LocalDate.of(2019, 4, 1));
+
+        userProfile1.getEducations().clear();
+        userProfile1.getEducations().add(e1);
+        userProfile1.getEducations().add(e2);
         userProfileRepository.save(userProfile1);
 
         return "index";
