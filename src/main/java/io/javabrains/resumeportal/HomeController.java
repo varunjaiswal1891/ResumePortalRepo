@@ -37,6 +37,8 @@ public class HomeController {
         j1.setDesignationTitle("System Engineer");
         j1.setStartDate(LocalDate.of(2020, 1, 1));
         j1.setCurrentJob(true);
+        j1.getResponsibilities().add("design the flow 11");
+        j1.getResponsibilities().add("advance quantum work flow");
 
         Job j2 = new Job();
         j2.setCompany("Cisco Systems Ltd");
@@ -46,6 +48,8 @@ public class HomeController {
         j2.setStartDate(LocalDate.of(2019, 5, 1));
         j2.setEndDate(LocalDate.of(2020, 1, 1));
         j2.setCurrentJob(false);
+        j2.getResponsibilities().add("design the flow 22");
+        j2.getResponsibilities().add("advance quantum work flow555 ");
         
         userProfile1.getJobs().clear();
         userProfile1.getJobs().add(j1);

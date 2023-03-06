@@ -66,6 +66,9 @@
 						<span th:text="${job.formattedStartDate} ">April 2011</span> -
 						<span th:text="${job.currentJob}? 'Present': ${job.formattedEndDate} ">Present</span>
 					</p>
+					<ul th:each="responsibility : ${job.responsibilities}">
+						<li th:text="${responsibility}">Responsibility</li>
+					</ul>
 				</article>
 			</div>
 			<div class="clear"></div>
