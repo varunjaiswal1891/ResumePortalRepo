@@ -81,7 +81,9 @@
 			</div>
 			
 			<div class="sectionContent">
-			
+				<ul class="keySkills" th:each="skill : ${userProfile.skills}">
+					<li th:text="${skill} ">A Key Skill</li>
+				</ul>
 			</div>
 			<div class="clear"></div>
 		</section>

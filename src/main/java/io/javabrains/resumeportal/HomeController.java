@@ -69,6 +69,12 @@ public class HomeController {
         e2.setStartDate(LocalDate.of(2017, 8, 7));
         e2.setEndDate(LocalDate.of(2019, 4, 1));
 
+        userProfile1.getSkills().clear();
+        userProfile1.getSkills().add("playes cricket");
+        userProfile1.getSkills().add("literature");
+        userProfile1.getSkills().add("violin");
+
+
         userProfile1.getEducations().clear();
         userProfile1.getEducations().add(e1);
         userProfile1.getEducations().add(e2);
