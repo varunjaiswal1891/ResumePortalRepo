@@ -85,8 +85,23 @@ public class HomeController {
 
     @GetMapping("/edit")
     public String edit(Model model,Principal principal) {
-        model.addAttribute("userId", principal.getName());
+
+        String userId = principal.getName();
+        Optional<UserProfile> userProfileOptional = userProfileRepository.findByUserName(userId);
+        userProfileOptional.orElseThrow(()-> new RuntimeException("User not found "+userId));
+        UserProfile userProfile = userProfileOptional.get();
+
+        model.addAttribute("userId", userId);
+        model.addAttribute("userProfile", userProfile);
         return "profile-edit";
+    }
+
+    @PostMapping("/edit")
+    public String postEdit(Model model,Principal principal) {
+        //model.addAttribute("userId", principal.getName());
+        //save the updated values in the form
+        String userId = principal.getName();
+        return "redirect:/view/" + userId;
     }
 
     @GetMapping("/view/{userId}")
