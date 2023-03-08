@@ -84,8 +84,9 @@ public class HomeController {
     }
 
     @GetMapping("/edit")
-    public String edit() {
-        return "profile-templates/1/index";
+    public String edit(Model model,Principal principal) {
+        model.addAttribute("userId", principal.getName());
+        return "profile-edit";
     }
 
     @GetMapping("/view/{userId}")
